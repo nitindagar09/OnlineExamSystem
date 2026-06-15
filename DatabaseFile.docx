@@ -1,0 +1,63 @@
+CREATE PROCEDURE sp_GetStudentResults
+    @StudentID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        ResultID,
+        TestName,
+        Subject,
+        Score,
+        TotalMarks,
+        CAST((CAST(Score AS FLOAT) / TotalMarks) * 100 AS DECIMAL(5,2)) AS Percentage,
+        DateTaken
+    FROM 
+        StudentResults
+    WHERE 
+        StudentID = @StudentID
+    ORDER BY 
+        DateTaken DESC;
+END;
+
+
+
+
+
+
+CREATE PROCEDURE sp_GetUserEmbedding
+    @Email NVARCHAR(100)
+AS
+BEGIN
+    SELECT FaceEmbedding FROM Students
+    WHERE Email = @Email
+END
+
+
+
+
+
+
+
+USE [OnlineExamSystem]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_InsertAdmin]    Script Date: 23-07-2025 19:40:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[sp_InsertStudent]
+    @FullName NVARCHAR(100),
+    @Email NVARCHAR(100),
+    @PasswordHash NVARCHAR(255),
+    @ContactNumber NVARCHAR(20),
+      @ActivationId UNIQUEIDENTIFIER,
+	  @FaceEmbedding NVARCHAR(MAX),
+    @FacePath VARCHAR(200)
+AS
+BEGIN
+    INSERT INTO Students (FullName, Email, PasswordHash, ContactNumber,ActivationId,FaceEmbedding,FacePath)
+    VALUES (@FullName, @Email, @PasswordHash, @ContactNumber,@ActivationId,@FaceEmbedding,@FacePath);
+END;
+
+bvcxz\

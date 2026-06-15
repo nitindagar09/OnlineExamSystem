@@ -1,0 +1,114 @@
+﻿/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    background-image: url('../Images/mn.png'); /* Soft gradient from light blue to white */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for Exams Section */
+.examsContainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); /* Light semi-transparent overlay */
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+h2 {
+    font-size: 2.5rem;
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    table th,
+    table td {
+        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 1.1rem;
+        border: 1px solid #ddd;
+    }
+
+    /* Header Style */
+    table th {
+        background-color: #007bff;
+        color:lightblue;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Row Styling */
+    table tr:nth-child(even) {
+        background-color: #f9f9f9; /* Even rows have a light gray background */
+    }
+
+    table tr:hover {
+        background-color: #f1f1f1; /* Hover effect for rows */
+        cursor: pointer;
+    }
+
+/* View Report Link Styling */
+.ViewReportLink {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .ViewReportLink:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+/* Responsive Design for Tables */
+@media (max-width: 768px) {
+    table th,
+    table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .examsContainer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .examsContainer {
+        padding: 15px;
+    }
+}

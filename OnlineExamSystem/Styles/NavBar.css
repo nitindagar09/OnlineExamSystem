@@ -1,0 +1,93 @@
+﻿
+#mainNav {
+    background-color: #083960;
+    height: 5rem;
+/*    position: fixed;*/
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    color: #dee2ee;
+}
+
+.logo i{
+    margin-top: 0.5rem;
+    margin-right:0.3rem;
+}
+
+.logOut {
+    margin-right: 2rem;
+/*    margin-top: 1rem;*/
+}
+
+#btnLogOut {
+    height: 2.5rem;
+    width: 7rem;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #007bff;
+    color: #083960;
+    transition: background-color 0.4s ease-in-out;
+}
+
+    #btnLogOut:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+#items {
+    flex-grow: 0;
+    width: 80%;
+}
+
+/*#items li {
+    margin-left: 1rem;
+    height: 2.1rem;
+    transition: box-shadow 0.5s linear;
+} 
+
+#li1:hover{
+    box-shadow: 0 2px 0 0 #007bffc6;
+}
+#li2:hover {
+    box-shadow: 0 2px 0 0 #007bffc6;
+}3
+#li3:hover {
+    box-shadow: 0 2px 0 0 #007bffc6;
+}*/
+
+    #items li {
+        position: relative;
+        margin-left: 1rem;
+        height: 2.5rem;
+        transition: all 0.5s linear; /* Smooth transition for all properties */
+    }
+
+        #items li::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0; /* Initially, no width */
+            height: 2px; /* Height of the shadow */
+            background-color: #cce5ff; /* Shadow color */
+            transition: width 0.5s ease-out; /* Transition for width */
+        }
+
+#li1:hover::before,
+#li2:hover::before,
+#li3:hover::before {
+    width: 100%; /* On hover, the shadow stretches to full width */
+}
+
+
+#items a {
+    color: #d1d2d6;
+    font-size: large;
+    /*    font-weight: 500;*/
+}

@@ -1,0 +1,463 @@
+﻿body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    transition: transform 0.3s ease;
+}
+
+    .container:hover {
+        transform: translateY(-3px);
+    }
+
+/* Heading */
+h3 {
+    font-size: 32px;
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    .nav-tabs .nav-link {
+        border: none;
+        color: #555;
+        font-weight: 600;
+        padding: 10px 25px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+        .nav-tabs .nav-link.active {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+        }
+
+        .nav-tabs .nav-link:hover {
+            color: #4facfe;
+        }
+
+/* Form */
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+.form-control {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #4facfe;
+        box-shadow: 0 0 8px rgba(79, 172, 254, 0.3);
+    }
+
+/* Button */
+.btn-primary {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #43e97b, #38f9d7);
+        transform: translateY(-2px);
+    }
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .table th {
+        background: #4facfe;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 14px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .table td {
+        background: #f9f9f9;
+        padding: 12px;
+        text-align: center;
+        color: #555;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table tr:hover td {
+        background: #f1f9ff;
+    }
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #4facfe;
+    font-weight: 500;
+}
+
+    a:hover {
+        color: #43e97b;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* Space between rows */
+.question-form-table {
+    width: 100%;
+    border-spacing: 0 15px; /* adds vertical space */
+    border-collapse: separate;
+}
+
+    /* First column (labels) */
+    .question-form-table td:first-child {
+        width: 200px;
+        font-weight: 500;
+        color: #555;
+        padding-right: 15px;
+    }
+
+    /* Inputs and dropdowns */
+    .question-form-table input[type="text"],
+    .question-form-table textarea,
+    .question-form-table select {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+        .question-form-table input:focus,
+        .question-form-table textarea:focus,
+        .question-form-table select:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 6px rgba(79, 172, 254, 0.3);
+            outline: none;
+        }
+.btn-save-question {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* modern gradient */
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-save-question:hover {
+        background: linear-gradient(135deg, #43e97b, #38f9d7); /* hover gradient */
+        box-shadow: 0 8px 20px rgba(67, 233, 123, 0.5);
+        transform: translateY(-3px) scale(1.05);
+    }
+
+    .btn-save-question:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 3px 10px rgba(37, 117, 252, 0.3);
+    }
+
+
+
+/* Main Button */
+[id*="btnOpenAI"] {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);
+}
+
+    [id*="btnOpenAI"]:hover {
+        background: linear-gradient(45deg, #43e97b, #38f9d7);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(67, 233, 123, 0.4);
+    }
+
+/* AI Chat Modal */
+#aiChatModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    width: 60%; /* Adjust width as needed */
+    max-height: 50%; /* Optional, limits the height */
+    background: #f7f7f7;
+    border-left: 2px solid #ccc;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    z-index: 1000;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Modal Header */
+[id*="aiChatModal"] h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+[id*="aiChatModal"] button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+    [id*="aiChatModal"] button:hover {
+        background: #ff1a1a;
+    }
+
+/* Textbox */
+[id*="txtPrompt"] {
+    width: 100% !important;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+    #txtPrompt:focus {
+        border-color: #4facfe;
+        box-shadow: 0 0 10px rgba(79, 172, 254, 0.2);
+    }
+
+/* Generate Button inside modal */
+[id*="btnGenerate"] {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(67, 233, 123, 0.3);
+}
+
+    [id*="btnGenerate"]:hover {
+        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        transform: scale(1.05);
+    }
+/* Save Selected button */
+[id*="btnSaveSelected"] {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+    [id*="btnSaveSelected"]:hover {
+        background: linear-gradient(45deg, #43e97b, #38f9d7);
+        transform: translateY(-2px);
+    }
+
+
+
+
+
+
+
+/*body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}*/
+
+/* Panel Styling */
+/*#pnlInsertQuestion {
+    max-width: 750px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    #pnlInsertQuestion:hover {
+        transform: translateY(-3px);
+    }*/
+
+    /* Heading */
+    /*#pnlInsertQuestion h3 {
+        font-size: 26px;
+        text-align: center;
+        color: #2d3748;
+        margin-bottom: 20px;
+    }*/
+
+    /* Table Layout */
+    /*#pnlInsertQuestion table {
+        width: 100%;
+        border-spacing: 0 15px;*/ /* adds space between rows */
+    /*}
+
+    #pnlInsertQuestion td {
+        padding: 8px;
+        vertical-align: middle;
+    }*/
+
+        /* Labels */
+        /*#pnlInsertQuestion td:first-child {
+            font-weight: 500;
+            color: #555;
+            width: 200px;
+        }*/
+
+    /* Inputs */
+    /*#pnlInsertQuestion input[type="text"],
+    #pnlInsertQuestion textarea,
+    #pnlInsertQuestion select {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 14px;
+    }
+
+        #pnlInsertQuestion input:focus,
+        #pnlInsertQuestion textarea:focus,
+        #pnlInsertQuestion select:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 6px rgba(79, 172, 254, 0.3);
+            outline: none;
+        }*/
+
+/* Button */
+/*#btnSaveQuestion {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+    #btnSaveQuestion:hover {
+        background: linear-gradient(45deg, #43e97b, #38f9d7);
+        transform: translateY(-2px);
+    }*/
+
+/* GridView Styling */
+/*.table {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+    .table th {
+        background: #4facfe;
+        color: white;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .table td {
+        padding: 10px;
+        text-align: center;
+        background: #f9f9f9;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table tr:hover td {
+        background: #f1f9ff;
+    }*/

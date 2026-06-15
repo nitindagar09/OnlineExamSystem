@@ -1,0 +1,298 @@
+﻿/* Body Background Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0.3)), url('../Images/mn.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 70vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem; /* Decrease bottom margin between fields */
+}
+
+/* Container and Form Styling */
+.container {
+    padding: 20px;
+    width: 700px;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin-bottom: 0.75rem; /* Decrease bottom margin between fields */
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 35px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.6s ease-in-out;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Heading */
+.form-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin:0.5rem;
+}
+
+/* Input Fields Styling */
+input.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border-radius: 12px !important;
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+    /* Focused Input Field Styling */
+    input.form-control:focus {
+        background: rgba(255, 255, 255, 0.9); 
+        box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+        background-color: #f7f9fc;
+    }
+
+/* Invalid Field Styling */
+input.is-invalid {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+/* Validation Summary Styling */
+#validationSummary {
+    display: none;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* Button Styling */
+.btn {
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background: #2575fc;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+    .btn-primary:hover {
+        background: #1a5edb;
+        cursor: pointer;
+    }
+
+/* Secondary Button Styling (Capture Button) */
+.btn-secondary {
+    background: #aaa;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+}
+
+    .btn-secondary:hover {
+        background: #888;
+    }
+
+/* Link Styling (Already Exists?) */
+.AlreadyExist {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+    .AlreadyExist p {
+        margin:8px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .AlreadyExist a {
+        color: #2575fc;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .AlreadyExist a:hover {
+            text-decoration: underline;
+        }
+
+/* OTP Section */
+.VerifyOtp {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  
+    }
+
+    .VerifyOtp input {
+        width: 50%;
+    }
+
+    .VerifyOtp button {
+        width: 50%;
+    }
+
+/* Camera Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+
+video,
+img#capturedPhoto {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Button Options in Modal */
+#initialButtons,
+#afterCaptureButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+    #initialButtons button {
+        font-size: 16px;
+    }
+
+    #afterCaptureButtons button {
+        font-size: 16px;
+    }
+
+/* Animation for Modal */
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px 25px;
+    }
+
+    .form-heading {
+        font-size: 24px;
+    }
+
+    .btn-primary {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    input.form-control {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Styling for OTP, Verify and Capture buttons */
+.VerifyOtp button,
+#initialButtons .btn-secondary {
+    border-radius: 12px;
+    padding: 10px 20px; /* Reduced padding for smaller buttons */
+    font-size: 16px; /* Smaller font size */
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Verify Button */
+.VerifyOtp button {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    height: 50px;
+    width: 120px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+    .VerifyOtp button:hover {
+        background: linear-gradient(to right, #4caf50, #76e2b3);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+.VerifyOtp .btn-verify {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    height: 50px;
+    width: 120px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #0077b6, #00b4d8); /* Light green gradient */
+    /* Capture Button */
+    #initialButtons .btn-secondary
+{
+    background: #76e2b3;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+    #initialButtons .btn-secondary:hover {
+        background: #5a6268;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+

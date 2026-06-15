@@ -1,0 +1,234 @@
+﻿
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../Images/xa.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    background-color: rgba(255, 255, 255, 0.5); /* Light semi-transparent overlay */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+
+
+h3 {
+    font-size: 2.4rem;
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 2.4rem;
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+/* Grid View Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.table th,
+.table td {
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.table-bordered tr:hover {
+    background-color: #f1f1f1;
+}
+
+.mt-4 {
+    margin-top: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+.mt-4, .mb-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Performance Summary Section */
+#litPerformanceSummary {
+    font-size: 1.3rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#performanceChart {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 600px;
+    max-height: 600px;
+    border-right: 3px solid #007bff; /* Vertical line between charts */
+}
+
+    #performanceChart:hover {
+        transform: scale(1.05);
+    }
+
+
+#cont {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between charts */
+    flex-wrap: wrap; /* Wrap to next line on smaller screens */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /*box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);*/
+    margin-top: 30px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1.2s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); /* Light semi-transparent overlay */
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+canvas {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie Chart Styling */
+#pieChart {
+    background-color: #ffffff;
+    margin-top: 30px;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    max-width: 575px;
+    max-height: 575px;
+}
+
+#pieChart:hover {
+    transform: scale(1.05); /* Hover effect for the pie chart */
+}
+
+
+canvas {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Literal Text */
+.literal-text {
+    font-size: 1.1rem;
+    color: #212529;
+    margin-bottom: 20px;
+}
+
+/* Hover and Active Effects */
+.table td:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.table th:hover {
+    background-color: #0056b3;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #performanceChart, #pieChart {
+        height: 400px;
+    }
+
+    #cont {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .chart-container {
+        min-width: 100%; /* Full width on smaller screens */
+        margin-right: 0;
+        margin-bottom: 20px; /* Spacing between charts on mobile */
+    }
+}
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    .table td,
+    .table th {
+        font-size: 0.9rem;
+    }
+
+    #cont {
+        padding: 15px;
+        margin-top: 10px;
+    }
+}

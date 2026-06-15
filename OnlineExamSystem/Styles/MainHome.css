@@ -1,0 +1,200 @@
+﻿.logo {
+    display: flex;
+    color: #dee2ee;
+}
+
+    .logo i {
+        margin-top: 0.5rem;
+        margin-right: 0.3rem;
+    }
+
+.navbar {
+    height: 5rem;
+    background-color: #083960 !important;
+}
+
+#li1 a {
+    color: #d1d2d6;
+}
+
+.nav-item a {
+    color: #d1d2d6 !important;
+}
+
+.btnLogin {
+    margin-right: 3rem;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnLogin, #btnAdminLogin {
+    width: 10rem;
+    line-height: 3rem;
+    border-radius: 0.5rem;
+}
+
+#btnLogin {
+    background-color: white;
+    color: #083960;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    border: 1px solid white;
+}
+
+    #btnLogin:hover {
+        background-color: #003865;
+        color: white;
+    }
+
+#btnAdminLogin {
+    color: white;
+    background-color: #27ae60;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    border: none;
+}
+
+    #btnAdminLogin:hover {
+        background-color: #048e42;
+    }
+
+#navbarNavDropdown {
+    flex-grow: 0;
+    width: 60%;
+}
+
+    #navbarNavDropdown li {
+        position: relative;
+        margin-left: 1rem;
+        height: 2.3rem;
+        transition: all 0.5s linear; /* Smooth transition for all properties */
+        font-size: large;
+    }
+
+        #navbarNavDropdown li::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0; /* Initially, no width */
+            height: 2px; /* Height of the shadow */
+            background-color: #cce5ff; /* Shadow color */
+            transition: width 0.5s ease-out; /* Transition for width */
+        }
+
+#li1:hover::before,
+#li2:hover::before,
+#li3:hover::before {
+    width: 100%; /* On hover, the shadow stretches to full width */
+}
+
+.dropdown-menu {
+    min-width: 20rem; /* Set wider width here */
+    /*      padding: 10px;*/
+}
+
+    .dropdown-menu li p {
+        margin: 0;
+        padding: 5px 0;
+    }
+
+/*Now MainHomepage maincontent styling start*/
+
+
+.title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+/*second part*/
+
+.Intro{
+    display: flex;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    justify-content: space-evenly;
+}
+
+.Intro-description{
+    display: flex;
+    flex-direction:column;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Intro-description p{
+    margin-top: 1rem;
+}
+
+.Intro-img img {
+    height: 450px;
+    width: 471px;
+}
+
+/*third part*/
+
+.features-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #003366;
+    color: white;
+}
+
+    .features-section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+.features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: white;
+    color: #333;
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 280px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card .icon {
+        background: linear-gradient(135deg, #00bcd4, #4caf50);
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .feature-card .icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+    .feature-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+        color: #666;
+    }

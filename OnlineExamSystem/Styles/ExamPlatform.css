@@ -1,0 +1,186 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.CountDown {
+    font-size: 2rem;
+    color: #d9534f;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.time {
+    font-weight: bold;
+}
+
+.startDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.exam-instructions {
+    max-width: 100%;
+ 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 6px solid #007BFF;
+    border-radius: 8px; 
+    line-height: 2;
+    height: fit-content;
+}
+
+.exam-instructions ul li{
+    font-size: 1.2rem;
+}
+
+/*Styling on how questions are shown on display*/
+
+/*#FormView1{
+    width: 100%;
+}
+
+.question{
+    width: 80%;
+    height: 80vh;
+    margin: 4rem 5rem;
+    padding: 20px;
+
+}
+
+.question h3{
+    font-size: xx-large;
+    margin-left: 5rem;
+}
+
+#FormView1_rblOptions {
+    line-height: 2rem;
+    margin-left: 5rem
+}
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.button  input{
+    height: 3rem;
+    width: 8rem;
+}*/
+
+/* Main container for FormView */
+#FormView1 {
+    width: 100%;
+}
+
+/* Question card */
+.question {
+    width: 80vw;
+    min-height: 65vh;
+    margin: 6rem auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    /* Question text */
+    .question h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #222;
+    }
+
+/* Options */
+#FormView1_rblOptions {
+    line-height: 2rem;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Button section */
+.button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    padding-top: 2rem;
+    gap: 1rem;
+}
+
+    /* Buttons */
+    .button input {
+        height: 3.2rem;
+        width: 9rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #3498db;
+        color: white;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+        .button input:hover {
+            background-color: #2c80b4;
+        }
+
+/* Timer box fixed in top-right */
+#fixedTimer {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: #f0f8ff;
+    border: 2px solid #3498db;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .question {
+        width: 90vw;
+        padding: 20px;
+    }
+
+    .button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #FormView1_rblOptions {
+        margin-left: 0;
+    }
+
+    #fixedTimer {
+        top: 10px;
+        right: 10px;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}

@@ -100,6 +100,7 @@ One of the key highlights of this project is the integration of OpenAI, which en
 * HTML
 * CSS
 * JavaScript
+* BootStrap
 * ASP.NET Web Forms
 
 ### Backend

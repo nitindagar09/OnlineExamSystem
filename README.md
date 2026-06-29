@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Online Exam System is a web-based examination platform developed as a Final Year Project. The system provides a secure and automated environment for conducting online examinations. It supports role-based access for Administrators and Students, email OTP verification, AI-powered question generation, automated result evaluation, PDF report generation, and anti-cheating mechanisms.
+Online Exam System is a web-based examination platform developed as a Final Year Project. The system provides a secure and automated environment for conducting online examinations. It supports role-based access for Examiners and Students, email OTP verification, AI-powered question generation, automated result evaluation, PDF report generation, and anti-cheating mechanisms.
 
 One of the key highlights of this project is the integration of OpenAI, which enables administrators to automatically generate exam questions based on the selected subject, difficulty level, and number of questions.
 
